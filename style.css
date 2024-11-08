@@ -1,0 +1,78 @@
+/* Reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the file upload */
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Title styling */
+h1 {
+    font-size: 2em;
+    color: #2d3748;
+    margin-bottom: 20px;
+}
+
+/* File input styling */
+input[type="file"] {
+    display: none;
+}
+
+/* Custom file upload button */
+label {
+    display: inline-block;
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+}
+
+/* Button hover effect */
+label:hover {
+    background-color: #357ab7;
+}
+
+/* Result display styling */
+.result {
+    margin-top: 20px;
+    font-size: 1.4em;
+    color: #4a5568;
+    border: 2px solid #4a90e2;
+    border-radius: 8px;
+    padding: 10px;
+    visibility: hidden;
+    transition: visibility 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+/* When the result is populated, make it visible */
+.result.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Additional hover effect for the file upload label */
+label:active {
+    transform: scale(0.98);
+}
